@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Закупка</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <p class="eyebrow">Личный список</p>
+      <h1>Закупка</h1>
+      <p class="place" id="place">Барнаул</p>
+    </div>
+    <p class="lede">Список и точка Магнита. Крупная цена — полка, оранжевая — онлайн.</p>
+  </header>
+
+  <section class="gaps" id="gaps" aria-label="Что уже работает"></section>
+  <p class="banner" id="banner" hidden></p>
+
+  <main class="layout">
+    <form class="composer" id="composer">
+      <label for="store">Точка Магнита</label>
+      <select id="store" name="store"></select>
+      <a class="text-link" id="promos-link" href="/promos.html">Акции</a>
+      <label for="list">Что купить</label>
+      <textarea id="list" name="text" rows="6" placeholder="молоко x2, хлеб, сахар"></textarea>
+      <div class="actions">
+        <button class="primary" type="submit" id="build">Собрать план</button>
+      </div>
+      <p class="hint" id="hint"></p>
+    </form>
+
+    <section class="receipt" id="receipt" aria-live="polite">
+      <h2 class="cart-title">Корзина</h2>
+      <p class="receipt-empty">Напиши список и нажми «Собрать план», потом выбери товары сам. Крупная цена — полка, оранжевая — онлайн.</p>
+    </section>
+  </main>
+
+  <section class="choices" id="choices" hidden></section>
+
+  <script src="/app.js"></script>
+</body>
+</html>
